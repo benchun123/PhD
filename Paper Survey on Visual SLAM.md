@@ -1,6 +1,20 @@
 # Bibliography on Visual SLAM
 
-# Survey
+## Survey
+
+### [a1] [Past Present, and Future of Simultaneous Localization and Mapping Toward the Robust-Perception Age ](https://ieeexplore.ieee.org/abstract/document/7747236)
+
+### [a2] [Review of vision-based Simultaneous Localization and Mapping ](https://ieeexplore.ieee.org/abstract/document/8729285)
+
+### [a3] [A Survey of Simultaneous Localization and Mapping ](https://whubaichuan.github.io/data/v3.pdf)
+
+### [a4] [Semantics for Robotic Mapping, Perception and Interaction A Survey](https://www.nowpublishers.com/article/Details/ROB-059)
+
+### [a5] [A survey of image semantics-based visual simultaneous localization and mapping](https://journals.sagepub.com/doi/full/10.1177/1729881420919185)
+
+### [a6] [Simultaneous localization and mapping in the epoch of semantics: a survey](https://link.springer.com/article/10.1007/s12555-018-0130-x)
+
+
 
 ## SLAM Survey
 
@@ -34,19 +48,6 @@ OpenVSLAM | 2019 | RGBD | Sparse | Feature matching | Yes | design visual slam a
 ## Semantic SLAM 
 continue ...
 
-
-
-## Reference
-
-### [a1] [Past Present, and Future of Simultaneous Localization and Mapping Toward the Robust-Perception Age ](https://ieeexplore.ieee.org/abstract/document/7747236)
-
-### [a2] [Review of vision-based Simultaneous Localization and Mapping ](https://ieeexplore.ieee.org/abstract/document/8729285)
-
-### [a3] [A Survey of Simultaneous Localization and Mapping ](https://whubaichuan.github.io/data/v3.pdf)
-
-### [a4] [Semantics for Robotic Mapping, Perception and Interaction A Survey](https://www.nowpublishers.com/article/Details/ROB-059)
-
-### [a5] [A survey of image semantics-based visual simultaneous localization and mapping](https://journals.sagepub.com/doi/full/10.1177/1729881420919185)
 
 
 ## Refenrence on Classic SLAM
