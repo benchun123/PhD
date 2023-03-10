@@ -25,6 +25,11 @@ OpenVSLAM | 2019 | RGBD | Sparse | Feature matching | Yes | design visual slam a
 |   | Year | Sensor | Landmark | Map | Data Association | Link
 |:---|:---|:---|:---|:---|:---|:---|
 
+1. PL-SLAM: Real-Time Monocular Visual SLAM with Points and Lines
+2. Direct Monocular Odometry Using Points and Lines
+3. Structure-aware SLAM with planes and lines in man-made environment
+4. Structure-SLAM: Low-Drift Monocular SLAM in Indoor Environments
+5. A real-time semantic visual SLAM approach with points and objects
 
 ## Semantic SLAM 
 continue ...

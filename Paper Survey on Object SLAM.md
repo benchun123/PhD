@@ -1,8 +1,24 @@
 # Bibliography on Object SLAM
 
-# Survey
-
-## SLAM Survey
+## Literature review of visual SLAM systems.
+|   | Sensor | Point | Plane | Object | Data Association |
+|:---|:---|:---|:---|:---|:---|
+\cite{davison2007monoslam} | RGB | image patch |   |  | patch search |
+\cite{klein2007parallel} | RGB | FAST |  |  | patch search |
+\cite{mur2015orb} | RGB | ORB |  |  | descriptor matching |
+\cite{hsiao2017keyframe} | RGB-D |  | plane |  | normal, distance, residual |
+\cite{zhang2019point} | RGB-D |  | plane |  | normal, distance, boundary |
+\cite{yang2016pop} | RGB | ORB | plane |  | normal, distance, polygon |
+\cite{li2021rgb} | RGB-D | ORB | plane |  | normal, distance |
+\cite{hosseinzadeh2017sparse} | RGB-D | ORB | plane |  | normal, distance |
+\cite{salas2013slam++} | RGB-D |  |  | 3D model | feature matching |
+\cite{nicholson2018quadricslam} | RGB |  |  | quadric | not mentioned |
+\cite{liao2022so} | RGB-D |  |  | quadric | not mentioned |
+\cite{yang2019cubeslam} | RGB | ORB |  | cuboid | in-object points |
+\cite{li2020view} | RGB |  |  | cuboid | geometric features |
+\cite{lin2021topology} | RGB |  |  | cuboid | geometric features, graph matching |
+\cite{yang2019monocular} | RGB | ORB | plane | cuboid | plane-object: spatial relationship |
+\cite{hosseinzadeh2019structure} | RGB-D | ORB | plane | quadric | plane-object: supporting relationship |
 
 ## Object-based SLAM (objects)
 |   | Year | Sensor | Landmark | Geometry | Data Association | Map |Features | Link |

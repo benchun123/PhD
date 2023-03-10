@@ -1,8 +1,7 @@
 # Bibliography on Plane SLAM
 
-# Plane Estimation
+## Plane Estimation
 
-## 2D Object Detection 
 |   | Year | Scene | Sensor | Method | Link |
 |:--|:--|:--|:--|:--|:--|
 RANSAC | 2010 | RGBD | Indoor | Plane detection in point cloud data |
@@ -14,6 +13,8 @@ PlaneNet | 2018 | RGB | Indoor | Depth prediction | [[a5]](#a5-planenet-piece-wi
 PlaneRecover | 2018 | RGB | Indoor | New Plane Structure-Induced Loss | [[a6]](#a6-planercnn-3d-plane-detection-and-reconstruction-from-a-single-image)
 PlaneRCNN | 2019 | RGB | Indoor | Mask, normal | [[a7]](#a7-recovering-3d-planes-from-a-single-image-via-convolutional-neural-networks)
 PlaneRecostruction | 2019 | RGB | Indoor | Two stage: plane segmentation + clustering | [[a8]](#a8-planerecostruction-single-image-piece-wise-planar-3d-reconstruction-via-associative-embedding)
+
+## Plane-base SLAM
 
 | | Year | Sensor | Detection | Association | Optimization | keywords | Link
 |:--|:--|:--|:--|:--|:--|:--|:--|
@@ -49,6 +50,10 @@ Structural Regularities | 2020 |  |  |  |  |
 
 ### [a8] [PlaneRecostruction: Single-Image Piece-wise Planar 3D Reconstruction via Associative Embedding ](https://openaccess.thecvf.com/content_CVPR_2019/html/Yu_Single-Image_Piece-Wise_Planar_3D_Reconstruction_via_Associative_Embedding_CVPR_2019_paper)
 
+Other work on Plane Estimation
+1. Real-Time Plane Segmentation using RGB-D Cameras
+
+
 
 ### [b1] [Simultaneous Localization and Mapping with Infinite Planes ](https://ieeexplore.ieee.org/abstract/document/7139837/)
 
@@ -67,3 +72,14 @@ Structural Regularities | 2020 |  |  |  |  |
 ### [b8] [Real-time dense 3D reconstruction and camera tracking via embedded planes representation](https://link.springer.com/article/10.1007/s00371-020-01899-1)
 
 ### [b9] [From Points to Planes - Adding Planar Constraints to Monocular SLAM Factor Graphs](https://ieeexplore.ieee.org/abstract/document/9340805/)
+
+Other work on Plane-based SLAM
+1. Linear RGB-D SLAM for Planar Environments
+2. Low-Drift Visual Odometry in Structured Environments by Decoupling Rotational and Translational Motion
+3. Visual Odometry with Drift-Free Rotation Estimation Using Indoor Scene Regularities
+4. Multi-planar Monocular Reconstruction of Manhattan Indoor Scenes
+5. RGB-D SLAM Using Point–Plane Constraints for Indoor Environments
+6. From Planes to Corners: Multi-Purpose Primitive Detection in Unorganized 3D Point Clouds
+7. From Points to Planes - Adding Planar Constraints to Monocular SLAM Factor Graphs
+8. RGB-D SLAM with Structural Regularities
+9. VPS-SLAM: Visual Planar Semantic SLAM for Aerial Robotic Systems
