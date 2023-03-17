@@ -13,8 +13,8 @@ PS: For more projects during my master studies, please click here: [MasterToPhD]
 # Overview
 * Research
 	* **`Doctoral Thesis`** [Visual Localization and Mapping with Objects in Logistic Environments](#1-doctoral-thesis-visual-localization-and-mapping-with-objects-in-logistic-environments)
-	* **`Under Submission 2023`**		  [Efficient Object-Level Semantic Mapping with RGB-D Cameras](#2-under-submission-2023-efficient-object-level-semantic-mapping-with-rgb-d-cameras)
-	* **`Under Submission 2023`**		  [Towards Autonomous Navigation for Agile Production System](#3-under-submission-2023-towards-autonomous-navigation-for-agile-production-system)
+	* **`Under Review 2023`**		  [Efficient Object-Level Semantic Mapping with RGB-D Cameras](#2-under-review-2023-efficient-object-level-semantic-mapping-with-rgb-d-cameras)
+	* **`Under Review 2023`**		  [Towards Autonomous Navigation for Agile Production System](#3-under-review-2023-towards-autonomous-navigation-for-agile-production-system)
 	* **`Advanced Robotics 2022`**		  [Structure SLAM with points plane and objects](#4-advanced-robotics-2022-structure-slam-with-points-plane-and-objects)
 	* **`CASE 2022`**		  [Object-based Loop Closure with Oriented Histgram Descriptor](#6-case-2022-object-based-loop-closure-with-oriented-histgram-descriptor)
 	* **`MFI2021`**   	  [Object-based Localization and Mapping with Bbox Constraints](#7-mfi-2021-object-based-localization-and-mapping-with-bbox-constraints)
@@ -37,7 +37,7 @@ PS: For more projects during my master studies, please click here: [MasterToPhD]
 
 TBD
 
-## 2. `Under Submission 2023` [Efficient Object-Level Semantic Mapping with RGB-D Cameras](./R2_Efficient%20Object-Level%20Semantic%20Mapping%20with%20RGB-D%20Cameras.pdf)
+## 2. `Under Review 2023` [Efficient Object-Level Semantic Mapping with RGB-D Cameras](https://github.com/benchun123/object-level-mapping)
 
 To autonomously navigate in real-world environments, mobile robots require a dense map to guarantee safety, but these maps always lack semantic information. When equipped with cameras, a lot of methods can create a dense semantic map, however, they suffer from critical run-time issues due to some heavy processing components. In this paper, we present an efficient semantic mapping system to incrementally build a voxel-based map with individual objects. Firstly, a frame-wise object segmentation scheme is adopted to segment 3D objects from RGB-D images. Then, a new object association strategy with geometry and semantic descriptor is proposed to track and update object information, Finally, the objects are integrated into a CPU-based voxel mapping approach to incrementally build a global object-level volumetric map while avoiding high computational costs.  Experiments on publicly available indoor datasets show that the proposed system performs better object segmentation than other object-level mapping methods while consuming less computational cost. Furthermore, the system is evaluated within a logistical robotic platform to demonstrate the use case in real-world applications.  
 
@@ -45,7 +45,7 @@ To autonomously navigate in real-world environments, mobile robots require a den
 <div align=center><img src="./README_Picture/R2_Mapping_Result.png"/></div>
 
 
-## 3. `Under Submission 2023` [Towards Autonomous Navigation for Agile Production System](./R3_Agiprobot_Towards%20Autonomous%20Navigation%20for%20Agile%20Production%20System.pdf)
+## 3. `Under Review 2023` [Towards Autonomous Navigation for Agile Production System](https://github.com/benchun123/object-based-navigation)
 
 A typical task for mobile robots in intra-logistics environments is to transport objects from one place to another. This requires the robots to not only locate the objects, but also design a collision-free path for the transport. Currently, many mobile robots operate in an occupancy map, they require a predefined coordinate as the goal and lack the availability of high-level navigation. With the aid of RGB-D cameras, semantic objects can be detected and added to the map, providing more possibilities for scene understanding and flexible navigation. In this paper, we extend current 2D mapping and navigation framework with object segmentation and fine position navigation to achieve better performance on task-level navigation. Firstly, we propose a framework to create and maintain a hypermap by recognizing semantic objects in the environment and integrating them into an existing 2D occupancy map. Secondly, we present a coarse-to-fine navigation strategy on this hypermap. The coarse navigation receives object information from the map and design a global path towards the destination, while the navigation utilizes the local information to ensure a precise dock to the object. A field experiment demonstrates that the proposed system can achieve high performance on autonomous navigation in an intra-logistic environment. 
 
@@ -53,7 +53,7 @@ A typical task for mobile robots in intra-logistics environments is to transport
 <div align=center><img src="./README_Picture/R3_Navigation_Result.png"/></div>
 
 
-## 4. `Advanced Robotics 2022` [Structure SLAM with Points, Plane, and Objects](./R4_Advance%20Robotics_Structure%20SLAM%20with%20points%20plane%20and%20objects.pdf)
+## 4. `Advanced Robotics 2022` [Structure SLAM with Points, Plane, and Objects](https://github.com/benchun123/point-plane-object-SLAM)
 
 Simultaneous localization and mapping (SLAM) is a fundamental problem for indoor mobile robots operating in unknown environments. While visual SLAM systems often use geometry features, the reconstructed maps lack semantic information. In this paper, we present a structure SLAM system with feature points, geometry planes, and semantic objects. Unlike other systems modelling planes and objects as collections of points, we choose a parametric representation for these landmarks. For every single frame, we start by generating cuboid candidates of detected objects with varying dimensions and orientations, then use 2D-3D fitting constraints to calculate the cuboid's translation, and finally introduce 3D spatial and 2D image constraints to select the best cuboid candidate. For SLAM optimization, the detected planes and objects can provide geometry constraints to improve the localization result, and act as landmarks to reconstruct a semantic map. Experiments on the ICL NUIM RGB-D dataset show that the proposed point-plane-object SLAM system can slightly improve localization accuracy, and is able to build a semantic map of the environment.
 
@@ -66,9 +66,9 @@ The trend towards heterogeneous, decentral systems in intralogistics results in 
 
 <div align=center><img src="./README_Picture/R5_Digital_Twin.png"/></div>
 
-## 6. `CASE 2022` [Object-based Loop Closure with Oriented Histgram Descriptor](./R6_CASE2022_Object-based%20Loop%20Closure%20with%20Oriented%20Histgram%20Descriptor.pdf)
+## 6. `CASE 2022` [Object-based Loop Closure with Oriented Histgram Descriptor](https://github.com/benchun123/object-based-loop-closure)
 
-## 7. `MFI 2021` [Object-based Localization and Mapping with Bbox Constraints](./R7_MFI2021_Object-based%20Localization%20and%20Mapping%20with%20Bbox%20Constraints.pdf)
+## 7. `MFI 2021` [Object-based Localization and Mapping with Bbox Constraints](https://github.com/benchun123/cuboid_slam_with_bbox_constraints)
 
 ## 8. `ACDU` [Automatic Connection Device Underbody](./R8_ACDU_Automatic%20Connection%20Device%20Underbody.pdf)
 
