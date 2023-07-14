@@ -6,23 +6,23 @@ PS: For more projects during my master studies, please click here: [MasterToPhD]
 
 # Research Interests
 
-*   Robotics
+*   Mobile Robotics
 *   3D Object Detection
 *   Visual Localization and Mapping 
 
 # Overview
 * Research
-	* **`Doctoral Thesis`** [Visual Localization and Mapping with Objects in Logistic Environments](#1-doctoral-thesis-visual-localization-and-mapping-with-objects-in-logistic-environments)
+	* **`Doctoral Thesis`** [Visual Localization and Mapping with Objects in Logistics Environments](#1-doctoral-thesis-visual-localization-and-mapping-with-objects-in-logistic-environments)
 	* **`Under Review 2023`**		  [Efficient Object-Level Semantic Mapping with RGB-D Cameras](#2-under-review-2023-efficient-object-level-semantic-mapping-with-rgb-d-cameras)
-	* **`Under Review 2023`**		  [Towards Autonomous Navigation for Agile Production System](#3-under-review-2023-towards-autonomous-navigation-for-agile-production-system)
-	* **`Advanced Robotics 2022`**		  [Structure SLAM with points plane and objects](#4-advanced-robotics-2022-structure-slam-with-points-plane-and-objects)
-	* **`CASE 2022`**		  [Object-based Loop Closure with Oriented Histgram Descriptor](#6-case-2022-object-based-loop-closure-with-oriented-histgram-descriptor)
-	* **`MFI2021`**   	  [Object-based Localization and Mapping with Bbox Constraints](#7-mfi-2021-object-based-localization-and-mapping-with-bbox-constraints)
+	* **`CASE 2023`**		  [Towards Autonomous Navigation for Agile Production System](#3-case-2023-towards-autonomous-navigation-for-agile-production-system)
+	* **`Advanced Robotics 2022`**		  [Structure SLAM with Points, Plane, and Objects](#4-advanced-robotics-2022-structure-slam-with-points-plane-and-objects)
+	* **`CASE 2022`**		  [Object-based Loop Closure with Oriented Histgram Descriptor](#5-case-2022-object-based-loop-closure-with-oriented-histgram-descriptor)
+	* **`MFI 2021`**   	  [Object-based Localization and Mapping with Bbox Constraints](#6-mfi-2021-object-based-localization-and-mapping-with-bbox-constraints)
 
 *  Projects
-	* **`Agiprobot`** 	  [Towards Autonomous Navigation for Agile Production System](#3-under-submission-2023-towards-autonomous-navigation-for-agile-production-system)
-	* **`SDM4FZI`** 	  [Digital Twin Implementation in Logistic Environments](#5-sdm4fzi-digital-twin-implementation-in-logistic-environments)
-	* **`ACDU`** 		  [Automatic Connection Device Underbody](#8-acdu-automatic-connection-device-underbody)
+	* **`AgiProbot`** 	  [Towards Autonomous Navigation for Agile Production System](#7-agiprobot-towards-autonomous-navigation-for-agile-production-system)
+	* **`SDM4FZI`** 	  [Digital Twin Implementation in Logistics Environments](#8-sdm4fzi-digital-twin-implementation-in-logistics-environments)
+	* **`ACDU`** 		  [Automatic Connection Device Underbody](#9-acdu-automatic-connection-device-underbody)
 
 *  Paper Survey
 	* **`Object Detection`** 	  [Paper Survey Object Detection](#paper-survey-on-object-detection)
@@ -33,9 +33,18 @@ PS: For more projects during my master studies, please click here: [MasterToPhD]
 	* **`Plane SLAM`** 		  [Paper Survey Plane SLAM](#paper-survey-on-plane-slam)
 
 # Details
-## 1. `Doctoral Thesis` [Visual Localization and Mapping with Objects in Logistic Environments]()
+## 1. `Doctoral Thesis` [Visual Localization and Mapping with Objects in Logistics Environments]()
 
-TBD
+**Background:** Aiming at the lack of semantic information in the logistics map system, the doctoral thesis investigates the significance of objects within robot localization, and mapping systems.
+
+**Object Detection:** Proposed three different methods to detect 3D objects from a single RGB-D frame with 3D cuboid representation. Experiments on SUN RGB-D dataset show that, the sample-score method outperforms the other two methods in speed (753ms per frame), but the deep learning method achieves the highest accuracy (3D IoU = 0.52, mAP@0.25=0.62). The geometry method provides a compromise between speed and accuracy. Considering different use-case, different methods can be employed.
+
+**Object-based Localization:** Proposed a visual SLAM system to simultaneously localize camera pose and build the map with objects. On the top of the existing ORB-SLAM 2 system, planes and objects are detected in every key-frames, a new data association strategy is designed to associate these features, and all features are integrated to formulate a unified optimization problem for SLAM. Experiments on ICL-NUIM living room sequences show that, compared to other state-of-the-art visual SLAM systems, introducing objects can benefit scene understanding and camera localization. 
+
+**Object-Level Mapping:** Presented an efficient semantic mapping pipeline to incrementally build a voxel-based map with individual objects. Experiments are designed on SceneNN dataset, the object points are detected and labelled in every frame, an object association strategy with geometry and semantic descriptor is conducted to track object information, and the objects are integrated into the voxblox framework to incrementally build a global object-level volumetric map while avoiding high computational costs.
+
+**Experiments:** Evaluated the proposed methods on intra-logistics environments with KARIS PRO mobile platform to demonstrate the effectiveness and robustness in the real world. 
+
 
 ## 2. `Under Review 2023` [Efficient Object-Level Semantic Mapping with RGB-D Cameras](https://github.com/benchun123/object-level-mapping)
 
@@ -44,14 +53,12 @@ To autonomously navigate in real-world environments, mobile robots require a den
 <div align=center><img src="./README_Picture/R2_Mapping_Framework.png"/></div>
 <div align=center><img src="./README_Picture/R2_Mapping_Result.png"/></div>
 
+## 3. `CASE 2023` [Towards Autonomous Navigation for Agile Production System](https://github.com/benchun123/object-based-navigation)
 
-## 3. `Under Review 2023` [Towards Autonomous Navigation for Agile Production System](https://github.com/benchun123/object-based-navigation)
+A typical task for mobile robots in production logistics is to transport objects from one location to another. This requires the robots not only to locate the objects, but also to design a collision-free transport path. Currently, many mobile robots operate in an occupancy map, require a predefined goal pose as a destination, and lack the availability of high-level navigation. With the aid of RGB-D cameras, semantic objects can be detected and added to the map, providing more opportunities for scene understanding and flexible navigation. In this paper, we extend the current 2D mapping and navigation framework with object segmentation and fine position navigation to achieve better performances in task-level navigation. First, we propose a framework for creating and maintaining a hypermap by recognizing semantic objects in the environment and integrating them into an existing 2D occupancy map. Second, we present a coarse-to-fine navigation strategy on this hypermap. The coarse navigation receives object information and designs a global path towards the destination, while the fine navigation utilizes the local information to ensure a precise docking to the workstation. A field experiment demonstrates that the proposed system can achieve high performances in a production logistics environment.
 
-A typical task for mobile robots in intra-logistics environments is to transport objects from one place to another. This requires the robots to not only locate the objects, but also design a collision-free path for the transport. Currently, many mobile robots operate in an occupancy map, they require a predefined coordinate as the goal and lack the availability of high-level navigation. With the aid of RGB-D cameras, semantic objects can be detected and added to the map, providing more possibilities for scene understanding and flexible navigation. In this paper, we extend current 2D mapping and navigation framework with object segmentation and fine position navigation to achieve better performance on task-level navigation. Firstly, we propose a framework to create and maintain a hypermap by recognizing semantic objects in the environment and integrating them into an existing 2D occupancy map. Secondly, we present a coarse-to-fine navigation strategy on this hypermap. The coarse navigation receives object information from the map and design a global path towards the destination, while the navigation utilizes the local information to ensure a precise dock to the object. A field experiment demonstrates that the proposed system can achieve high performance on autonomous navigation in an intra-logistic environment. 
-
+<div align=center><img src="./README_Picture/R3_Navigation_Framework.png"/></div>
 <div align=center><img src="./README_Picture/R3_Navigation_Sim.png"/></div>
-<div align=center><img src="./README_Picture/R3_Navigation_Result.png"/></div>
-
 
 ## 4. `Advanced Robotics 2022` [Structure SLAM with Points, Plane, and Objects](https://github.com/benchun123/point-plane-object-SLAM)
 
@@ -60,17 +67,38 @@ Simultaneous localization and mapping (SLAM) is a fundamental problem for indoor
 <div align=center><img src="./README_Picture/R4_SLAM_Object.png"/></div>
 <div align=center><img src="./README_Picture/R4_SLAM_Result.png"/></div>
 
-## 5. `SDM4FZI` [Digital Twin Implementation in Logistic Environments](./R5_Digital%20Twin%20Implementation%20in%20Logistic%20Environments.pdf)
+## 5. `CASE 2022` [Object-based Loop Closure with Oriented Histgram Descriptor](https://github.com/benchun123/object-based-loop-closure)
 
-The trend towards heterogeneous, decentral systems in intralogistics results in the need for a concept to describe and virtualize assets to enable their interaction. The multi-layer concept of Cyber-Physical Intralogistics Systems (CPIS) is introduced. The system description (descriptive layer) defines the structure of the digital twins and the communication (virtual layer) of physical (robots, periphery) and logical assets (control systems, simulations). To implement this concept, an experimental environment was developed at the Institute for Material Handling and Logistics and the Karlsruhe Institute of Technology. It consists of physical components, such as models of mobile robots or manipulators, and further periphery, such as racks and charging stations. The environment is supplemented by simulations and control software.
+Loop closure can effectively eliminate the accumulated error in Simultaneous Localization and Mapping (SLAM). Appearance-based localization methods tend to fail under large viewpoint changes. In this paper, we propose a monocular SLAM system with object-based loop closure against viewpoint variation to achieve global localization. Objects are represented as cuboids and inferred from 2D object observation. On this basis, we construct a semantic topology graph from the objectoriented map and propose an efficient graph matching method with a directional histogram descriptor to detect the loop.Objects are matched if they satisfy general, graph and geometry verifications. By aligning the matched objects, the accumulated errors can be corrected, and the map can be updated. Experimental results demonstrate that the proposed method shows high accuracy and robustness under large viewpoint differences.
 
-<div align=center><img src="./README_Picture/R5_Digital_Twin.png"/></div>
+<div align=center><img src="./README_Picture/R5_Loop_Closure.png"/></div>
 
-## 6. `CASE 2022` [Object-based Loop Closure with Oriented Histgram Descriptor](https://github.com/benchun123/object-based-loop-closure)
+## 6. `MFI 2021` [Object-based Localization and Mapping with Bbox Constraints](https://github.com/benchun123/cuboid_slam_with_bbox_constraints)
 
-## 7. `MFI 2021` [Object-based Localization and Mapping with Bbox Constraints](https://github.com/benchun123/cuboid_slam_with_bbox_constraints)
+In this paper, we present a three-dimensional object detection method for a single image and an object-based localization and mapping system. For 3D object detection, we firstly generate high-quality cuboid candidates by sampling object rotation and dimension. Then, the translation of each candidate is estimated in a closed form solution with camera projection function and bounding box constraints. Finally, all candidates are projected into the image, scored and selected based on the alignment with detected lines. To overcome object detection accuracy issues, the results are improved by multi-view optimization. Besides, objects can provide geometry constraints and semantic information to improve camera pose estimation and monocular drift. A point-object SLAM system is formulated to jointly optimize the poses of camera, objects and points. We evaluate our object detection method on objects from the KITTI, the SUN RGB-D and a self collected dataset. The results show that our method outperforms existing approaches. The point-cuboid SLAM experiments on the TUM RGB-D, ICL-NUIM and our self collected dataset show that our algorithm can improve both camera localization accuracy and 3D object detection accuracy
 
-## 8. `ACDU` [Automatic Connection Device Underbody](./R8_ACDU_Automatic%20Connection%20Device%20Underbody.pdf)
+<div align=center><img src="./README_Picture/R6_Bounding_Box.png"/></div>
+
+## 7. `AgiProbot` [Towards Autonomous Navigation for Agile Production System](https://github.com/benchun123/object-based-navigation)
+
+"AgiProbot": Agile PROduction system using mobile, learning roBOTs with multi-sensors for uncertain product specifications.
+
+This research project aims to develop a production system for remanufacturing, in which used products can be disassembled and recycled. 7 institutes participate, and we (IFL) develop an autonomous intralogistics system which realizes the material flow of the production system by means of driverless transport systems, smart transfer units and handling robots. To be specific, there are several workstations and transport robots, we are going to design an autonomous navigation system to delivery objects among these workstations.
+
+<div align=center><img src="./README_Picture/R7_AgiProbot_Robot.png"/></div>
+<div align=center><img src="./README_Picture/R7_AgiProbot.png"/></div>
+
+## 8. `SDM4FZI` [Digital Twin Implementation in Logistics Environments](https://github.com/benchun123/Digital-Twin-Implementation)
+
+In the automotive industry, Software Defined Manufacturing (SDM) technology was used to study the ability of systems to dynamically respond to production changes. The basic prerequisite is the abstraction of the hardware by digital twins with the help of which the software can be automatically derived and distributed.  Specifically, we are going to implement a digital twin system to study multi-robot system. 
+
+<div align=center><img src="./README_Picture/R8_SDM4FZI.png"/></div>
+
+## 9. `ACDU` [Automatic Connection Device Underbody](./R9_ACDU_Automatic%20Connection%20Device%20Underbody.pdf)
+
+The research project aims to design an autonomous robot capable of docking a charger to electric cars from underbody. After search for many feasible solutions, we finally choose an infrared LEDs based solution with Jetson Nano and Raspberry Pi cameras. We implement different functions to realize docking, including number plate recognition, car localization, fine position navigation, etc. Furthermore, we evaluate the whole system in a test environments with a docking success rate of about 9/10.
+
+<div align=center><img src="./README_Picture/R9_ACDU.png"/></div>
 
 
 # Bibliography
